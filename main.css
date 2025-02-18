@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cbe3f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background: #a6c9e8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+}
+.header {
+    background: #0073e6;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input, select, textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.time-group {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.time-group input {
+    flex: 1;
+}
+.inline-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.inline-inputs div {
+    display: flex;
+    flex-direction: column;
+    width: calc(16.66% - 10px);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.btn-submit {
+    background: linear-gradient(135deg, #00cc66, #00b359);
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    display: block;
+    width: 30%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 204, 102, 0.3);
+}
+.btn-submit:hover {
+    box-shadow: 0 6px 20px rgba(0, 204, 102, 0.4);
+    transform: translateY(-2px);
+}
+.btn-submit:active {
+    transform: translateY(0);
+}
+@media (max-width: 600px) {
+    .inline-inputs div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}
+.unit-container {
+    display: flex;
+    gap: 0;
+    align-items: center;
+}
+#unit-dropdown {
+    margin-left: 0;
+    width: auto;
+}
+.input-with-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.input-with-label label {
+    text-align: center;
+    width: auto;
+    margin: 0 5px;
+}
+.input-with-label input {
+    flex: 1;
+}
+.error {
+    border: 1px solid red !important;
+}
+.loading {
+    display: none;
+    color: #0073e6;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.unit-label {
+    color: #666;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+#total {
+    text-align: left;
+    padding-right: 8px;
+}

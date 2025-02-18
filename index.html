@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業日報</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">作業日報</div>
+        
+        <div class="form-group">
+            <label>作業日</label>
+            <input type="date" id="work-date" required>
+        </div>
+        
+        <div class="form-group">
+            <label>商品コード</label>
+            <input type="text" id="product-code" placeholder="商品コードを入力" required>
+        </div>
+        
+        <div class="form-group">
+            <label>商品名（自動表示）</label>
+            <input type="text" id="product-name" disabled>
+            <div class="loading" id="product-name-loading">読み込み中...</div>
+        </div>
+        
+        <div class="form-group">
+            <label>号機</label>
+            <select id="machine-number" required>
+                <option value="" disabled selected>機械名を選択してください</option>
+                <option value="１号機">１号機</option>
+                <option value="2号機">2号機</option>
+                <option value="3号機">3号機</option>
+                <option value="4号機">4号機</option>
+                <option value="5号機">5号機</option>
+                <option value="6号機">6号機</option>
+                <option value="ガウン１号機">ガウン１号機</option>
+                <option value="ガウン2号機">ガウン2号機</option>
+                <option value="ガウン3号機">ガウン3号機</option>
+                <option value="ガウン4号機">ガウン4号機</option>
+                <option value="ロープ 1号機">ロープ 1号機</option>
+                <option value="ロープ 2号機">ロープ 2号機</option>
+                <option value="Carry Cup">Carry Cup</option>
+                <option value="オフセット印刷機">オフセット印刷機</option>
+                <option value="紙ラミ">紙ラミ</option>
+                <option value="クロス カット">クロスカット</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>目標数</label>
+            <div class="input-with-label">
+                <input type="text" id="target-quantity" class="numeric-input" placeholder="目標数を入力" required>
+                <label>ショット数</label>
+                <input type="text" id="shot-quantity" class="numeric-input" placeholder="ショット数を入力" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>予定時間</label>
+            <input type="text" id="scheduled-time" disabled>
+        </div>
+        
+        <div class="form-group">
+            <label>実績数</label>
+            <div class="unit-container">
+                <input type="text" id="actual-quantity" class="numeric-input" placeholder="実績数を入力" required>
+                <select id="unit-dropdown" required>
+                    <option value="枚">枚</option>
+                    <option value="冊">冊</option>
+                    <option value="ロット">ロット</option>
+                    <option value="巻">巻</option>
+                    <option value="kg">kg</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>実作業時間</label>
+            <input type="text" id="actual-time" placeholder="実作業時間を入力" required>
+        </div>
+
+        <div class="form-group">
+            <label>単価</label>
+            <div class="input-with-label">
+                <input type="text" id="price" class="numeric-input" placeholder="単価を入力" required>
+                <label>合計</label>
+                <input type="text" id="total" value="¥0" disabled>
+            </div>
+        </div>
+
+        <div class="inline-inputs">
+            <div>
+                <label>原反切替</label>
+                <input type="text" id="b26" class="numeric-input" value="">
+            </div>
+            <div>
+                <label>調整</label>
+                <input type="text" id="d26" class="numeric-input" value="">
+            </div>
+            <div>
+                <label>色替</label>
+                <input type="text" id="f26" class="numeric-input" value="">
+            </div>
+            <div>
+                <label>検品</label>
+                <input type="text" id="h26" class="numeric-input" value="">
+            </div>
+            <div>
+                <label>その他</label>
+                <input type="text" id="j26" class="numeric-input" value="">
+            </div>
+            <div>
+                <label>非稼働時間</label>
+                <input type="text" id="l26" value="0" disabled>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>備考</label>
+            <textarea id="remarks" rows="4" placeholder="備考を入力"></textarea>
+        </div>
+
+        <button type="button" class="btn-submit" id="submit-btn">送信</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./main.js"> </script>
+</body>
+</html>
